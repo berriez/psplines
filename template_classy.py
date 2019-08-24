@@ -22,8 +22,8 @@ class PsplinesClf(BaseEstimator, ClassifierMixin):
         Degree of the spline functions
     pord : int, default = 2
         Degree of the difference matrix
-    min : float, default=None
-    max : float, default=None
+    min : float, default = None
+    max : float, default = None
     max_iter : int, maximum number of iterations
     Attributes
     ----------
@@ -150,7 +150,6 @@ class PsplinesClf(BaseEstimator, ClassifierMixin):
         n = P.shape[1]
         D = np.diff(np.eye(n),deg+1)/(mt.gamma(deg+1)*dx**deg)
         B = (-1)**(deg + 1)*np.dot(P,D)
-
         pred = np.dot(B,self.beta_)
         self.pred = np.where(pred > 0.0, 1, 0)
         return self.pred
