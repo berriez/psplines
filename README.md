@@ -1,1 +1,1 @@
-# psplines
+# p-splines logistic regression
