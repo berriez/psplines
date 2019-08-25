@@ -9,7 +9,9 @@ import numpy as np
 from sklearn.datasets import load_breast_cancer
 from sklearn.linear_model import LogisticRegression
 from sklearn.multiclass import OneVsRestClassifier
-
+#
+# loading sci-kit learn internal data
+#
 X,y = load_breast_cancer(return_X_y=True)
 x = X[:,1]
 x = x.reshape(-1, 1)
